@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #111, #333);
+  color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  font-size: 2rem;
+  color: #ff8c00;
+}
+canvas {
+  background: #222;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px rgba(255, 140, 0, 0.5);
+}
