@@ -2,17 +2,23 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#222">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#222222">
 <title>Block Blast</title>
 <link rel="stylesheet" href="style.css">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.png">
-
 </head>
 <body>
 <h1>Block Blast</h1>
 <canvas id="game"></canvas>
+
+<div id="shapes">
+  <button data-shape="0">■</button>
+  <button data-shape="1">■■</button>
+  <button data-shape="2">L</button>
+</div>
+
 <script src="spiel.js"></script>
 <script>
 if ("serviceWorker" in navigator) {
@@ -20,6 +26,14 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/service-worker.js");
   });
 }
+</script>
+<script>
+  // Button-Steuerung
+  document.querySelectorAll('#shapes button').forEach(button => {
+    button.addEventListener('click', e => {
+      selectedShapeIndex = parseInt(button.getAttribute('data-shape'));
+    });
+  });
 </script>
 </body>
 </html>
