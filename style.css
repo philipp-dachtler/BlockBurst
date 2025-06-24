@@ -1,3 +1,4 @@
+/* Allgemeine Styles */
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #111, #333);
@@ -6,12 +7,35 @@ body {
   margin: 0;
   padding: 20px;
 }
+
 h1 {
   font-size: 2rem;
   color: #ff8c00;
 }
+
+/* Das Spielfeld */
 canvas {
   background: #222;
   border-radius: 8px;
   box-shadow: 0px 0px 30px rgba(255, 140, 0, 0.5);
+}
+
+/* Button-Leiste */
+#shapes {
+  margin: 20px 0;
+}
+
+#shapes button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin: 0 5px;
+  background: #ff8c00;
+  color: #222;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+#shapes button:hover {
+  background: #ff9f25;
 }
